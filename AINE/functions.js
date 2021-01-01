@@ -133,7 +133,7 @@ const close = (id, text) => {
 	spins.fail(id, {text: text})
 }
 
-const banner = cfonts.render(('ARIS187ID|AR15BOT'), {
+const banner = cfonts.render(('AINE|AINEBOT'), {
     font: 'chrome',
     color: 'candy',
     align: 'center',

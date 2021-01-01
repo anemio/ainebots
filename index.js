@@ -21,7 +21,7 @@ const
 const qrcode = require("qrcode-terminal") //ANAK ASU
 const moment = require("moment-timezone") //TOBAT SU
 const fs = require("fs") //SU
-const { color, bgcolor } = require('./A187ID/color')
+const { color, bgcolor } = require('./AINE/color')
 const { help } = require('./AINE/help')
 const kagApi = require('@kagchi/kag-api')
 const { donasi } = require('./AINE/donasi')

@@ -66,8 +66,8 @@ const help = (prefix) => {
 ┃╠➥ *${prefix}listadmin*
 ┃╠➥ *${prefix}blocklist*
 ┃╠➥ *${prefix}wait*
-┃╠➥ *${prefix}nama*
-┃╠➥ *${prefix}map*
+┃╠➥ *${prefix}nama* [Aine]
+┃╠➥ *${prefix}map* [Jakarta]
 ┃╠➥ *${prefix}qrcode*
 ┃╠➥ *${prefix}tiktokstalk*
 ┃╠➥ *${prefix}shortlink*
@@ -75,23 +75,16 @@ const help = (prefix) => {
 ┃╠➥ *${prefix}alay*
 ┃╠➥ *${prefix}quotes*
 ┃╠➥ *${prefix}bucin*
-┃╠➥ *${prefix}wiki*
-┃╠➥ *${prefix}wikien*
+┃╠➥ *${prefix}wiki* [Anjing]
+┃╠➥ *${prefix}wikien* [Dog]
 ┃╚═══════════════════╝
 ┣━━━━°❀ ❬ 𝙎𝙊𝙐𝙉𝘿 ❭ ❀°━━━━⊱
 ┃╔═══════════════════╗
 ┃╠➥ *${prefix}tapi*
 ┃╚═══════════════════╝
 ┣━━━━━━━━━━━━━━━━━━━━━⊱
-┃┌───────────────────┐
-┃│╔══╗╔═╗╔══╗╔══╗
-┃│║╔╗║║╬║╚║║╝║══╣
-┃│║╠╣║║╗╣╔║║╗╠══║
-┃│╚╝╚╝╚╩╝╚══╝╚══╝
-┃├───────────────────┐
-┃└───────────────────┘
 ┣━━━━━━━━━━━━━━━━━━━━━┓
-┃  𝗣𝗢𝗪𝗘𝗥𝗘𝗗 𝗕𝗬 𝗔𝗥𝗜𝗦𝟭𝟴𝟳 𝗜𝗗   
+┃  𝗣𝗢𝗪𝗘𝗥𝗘𝗗 𝗕𝗬 𝐀𝐈𝐍𝐄𝐁𝐎𝐓   
 ┗━━━━━━━━━━━━━━━━━━━━━┛`
 }
 

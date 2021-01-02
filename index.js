@@ -271,7 +271,37 @@ client.on('group-participants-update', async (anu) => {
 					anu = await fetchJson(`https://tobz-api.herokuapp.com/api/textpro?theme=wolflogo1&text1=${teks1}&text2=${teks2}`, {method: 'get'})
 					buffer = await getBuffer(anu.result)
 					client.sendMessage(from, buffer, image, {quoted: mek})
-					break				
+					break
+				case 'logolion':
+					var gh = body.slice(11)
+					var teks1 = gh.split("|")[0];
+					var teks2 = gh.split("|")[1];
+					if (args.length < 1) return reply(`teksnya mana? contoh ${prefix}logowolf Aine|Cool`)
+					reply(mess.wait)
+					anu = await fetchJson(`https://tobz-api.herokuapp.com/api/textpro?theme=lionlogo&text1=${teks1}&text2=${teks2}`, {method: 'get'})
+					buffer = await getBuffer(anu.result)
+					client.sendMessage(from, buffer, image, {quoted: mek})
+					break
+				case 'logojoker':
+					var gh = body.slice(11)
+					var teks1 = gh.split("|")[0];
+					var teks2 = gh.split("|")[1];
+					if (args.length < 1) return reply(`teksnya mana? contoh ${prefix}logowolf Aine|Cool`)
+					reply(mess.wait)
+					anu = await fetchJson(`https://tobz-api.herokuapp.com/api/textpro?theme=jokerlogo&text1=${teks1}&text2=${teks2}`, {method: 'get'})
+					buffer = await getBuffer(anu.result)
+					client.sendMessage(from, buffer, image, {quoted: mek})
+					break
+				case 'logoglitch':
+					var gh = body.slice(11)
+					var teks1 = gh.split("|")[0];
+					var teks2 = gh.split("|")[1];
+					if (args.length < 1) return reply(`teksnya mana? contoh ${prefix}logowolf Aine|Cool`)
+					reply(mess.wait)
+					anu = await fetchJson(`https://tobz-api.herokuapp.com/api/textpro?theme=glitch&text1=${teks1}&text2=${teks2}`, {method: 'get'})
+					buffer = await getBuffer(anu.result)
+					client.sendMessage(from, buffer, image, {quoted: mek})
+					break
 					case 'setpp': 
                         if (!isGroup) return reply(mess.only.group)
                        if (!isGroupAdmins) return reply(mess.only.admin)

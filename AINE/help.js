@@ -9,10 +9,12 @@ const help = (prefix) => {
 ┃╚═══════════════════╝
 ┣━━━━°❀ ❬ 𝗠𝗔𝗞𝗘𝗥 ❭ ❀°━━━━⊱
 ┃╔═══════════════════╗
-┃╠➥ *${prefix}sticker nobg*
 ┃╠➥ *${prefix}nulis* [text]
 ┃╠➥ *${prefix}toimg* [reply pict]
 ┃╠➥ *${prefix}logowolf* [AINE|text]
+┃╠➥ *${prefix}logolion* [AINE|text]
+┃╠➥ *${prefix}logojoker* [AINE|text]
+┃╠➥ *${prefix}logoglitch* [AINE|text]
 ┃╚═══════════════════╝
 ┣━━━━°❀ ❬ 𝙈𝙀𝘿𝙄𝘼 ❭ ❀°━━━━━⊱
 ┃╔═══════════════════╗

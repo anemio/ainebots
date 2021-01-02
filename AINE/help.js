@@ -9,20 +9,18 @@ const help = (prefix) => {
 ┃╚═══════════════════╝
 ┣━━━━°❀ ❬ 𝗠𝗔𝗞𝗘𝗥 ❭ ❀°━━━━⊱
 ┃╔═══════════════════╗
-┃╠➥ *${prefix}sticker*
 ┃╠➥ *${prefix}sticker nobg*
-┃╠➥ *${prefix}tsticker*
-┃╠➥ *${prefix}nulis*
-┃╠➥ *${prefix}logowolf*
+┃╠➥ *${prefix}nulis* [text]
+┃╠➥ *${prefix}toimg* [reply pict]
+┃╠➥ *${prefix}logowolf* [AINE|text]
 ┃╚═══════════════════╝
 ┣━━━━°❀ ❬ 𝙈𝙀𝘿𝙄𝘼 ❭ ❀°━━━━━⊱
 ┃╔═══════════════════╗
-┃╠➥ *${prefix}tts*
 ┃╠➥ *${prefix}tiktok*
 ┃╠➥ *${prefix}meme*
 ┃╠➥ *${prefix}memeindo*
 ┃╠➥ *${prefix}nsfwloli* 
-┃╠➥ *${prefix}ocr*
+┃╠➥ *${prefix}ocr* [pict]
 ┃╠➥ *${prefix}neko*
 ┃╠➥ *${prefix}randomanime*
 ┃╠➥ *${prefix}loli*
@@ -36,9 +34,11 @@ const help = (prefix) => {
 ┣━━━━°❀ ❬ 𝙂𝙍𝙊𝙐𝙋 ❭ ❀°━━━━⊱
 ┃╔═══════════════════╗
 ┃╠➥ *${prefix}add* [62xxx]
-┃╠➥ *${prefix}kick* [tag]
-┃╠➥ *${prefix}setpp*
-┃╠➥ *${prefix}tagme*
+┃╠➥ *${prefix}kick* [tag nomor]
+┃╠➥ *${prefix}setpp* [pict]
+┃╠➥ *${prefix}tagme* [tag]
+┃╠➥ *${prefix}tagall*
+┃╠➥ *${prefix}listadmin*
 ┃╠➥ *${prefix}demote* [tag]
 ┃╠➥ *${prefix}promote* [tag]
 ┃╠➥ *${prefix}grup* [buka/tutup]
@@ -48,10 +48,11 @@ const help = (prefix) => {
 ┃╚═══════════════════╝
 ┣━━━━°❀ ❬ 𝙊𝙒𝙉𝙀𝙍 ❭ ❀°━━━━⊱
 ┃╔═══════════════════╗
-┃╠➥ *${prefix}bc* 
-┃╠➥ *${prefix}clearall*
-┃╠➥ *${prefix}setprefix*
+┃╠➥ *${prefix}bc* [text]
+┃╠➥ *${prefix}clearall* 
+┃╠➥ *${prefix}setprefix* []
 ┃╠➥ *${prefix}leave*
+┃╠➥ *${prefix}blocklist*
 ┃╠➥ *${prefix}clone* [tag]
 ┃╚═══════════════════╝
 ┣━━━━━°❀ ❬ 𝙎𝙋𝘼𝙈 ❭ ❀°━━━━━⊱
@@ -62,17 +63,16 @@ const help = (prefix) => {
 ┃╚═══════════════════╝
 ┣━━━━°❀ ❬ 𝙊𝙏𝙃𝙀𝙍 ❭ ❀°━━━━⊱
 ┃╔═══════════════════╗
-┃╠➥ *${prefix}ytsearch*
-┃╠➥ *${prefix}listadmin*
-┃╠➥ *${prefix}blocklist*
+┃╠➥ *${prefix}ytsearch* [text]
 ┃╠➥ *${prefix}wait*
 ┃╠➥ *${prefix}nama* [Aine]
 ┃╠➥ *${prefix}map* [Jakarta]
-┃╠➥ *${prefix}qrcode*
+┃╠➥ *${prefix}qrcode* [link]
 ┃╠➥ *${prefix}tiktokstalk*
 ┃╠➥ *${prefix}shortlink*
 ┃╠➥ *${prefix}url2img*
-┃╠➥ *${prefix}alay*
+┃╠➥ *${prefix}alay* [text]
+┃╠➥ *${prefix}hilih* [text]
 ┃╠➥ *${prefix}quotes*
 ┃╠➥ *${prefix}bucin*
 ┃╠➥ *${prefix}wiki* [Anjing]
@@ -80,7 +80,8 @@ const help = (prefix) => {
 ┃╚═══════════════════╝
 ┣━━━━°❀ ❬ 𝙎𝙊𝙐𝙉𝘿 ❭ ❀°━━━━⊱
 ┃╔═══════════════════╗
-┃╠➥ *${prefix}tapi*
+┃╠➥ *${prefix}gtts*
+┃╠➥ *${prefix}tts*
 ┃╚═══════════════════╝
 ┣━━━━━━━━━━━━━━━━━━━━━⊱
 ┣━━━━━━━━━━━━━━━━━━━━━┓

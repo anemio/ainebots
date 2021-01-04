@@ -21,25 +21,25 @@ const
 const qrcode = require("qrcode-terminal") //ANAK ASU
 const moment = require("moment-timezone") //TOBAT SU
 const fs = require("fs") //SU
-const { color, bgcolor } = require('./A187ID/color')
-const { help } = require('./A187ID/help')
+const { color, bgcolor } = require('./AINE/color')
+const { help } = require('./AINE/help')
 const kagApi = require('@kagchi/kag-api')
-const { donasi } = require('./A187ID/donasi')
-const { fetchJson } = require('./A187ID/fetcher')
-const { recognize } = require('./A187ID/ocr')
-const { wait, simih, getBuffer, h2k, generateMessageID, getGroupAdmins, getRandom, banner, start, info, success, close } = require('./A187ID/functions')
+const { donasi } = require('./AINE/donasi')
+const { fetchJson } = require('./AINE/fetcher')
+const { recognize } = require('./AINE/ocr')
+const { wait, simih, getBuffer, h2k, generateMessageID, getGroupAdmins, getRandom, banner, start, info, success, close } = require('./AINE/functions')
 const tiktod = require('tiktok-scraper')
 const ffmpeg = require('fluent-ffmpeg')
 const { removeBackgroundFromImageFile } = require('remove.bg')
-const welkom = JSON.parse(fs.readFileSync('./A187ID/welkom.json'))
-const nsfw = JSON.parse(fs.readFileSync('./A187ID/nsfw.json'))
-const samih = JSON.parse(fs.readFileSync('./A187ID/simi.json'))
+const welkom = JSON.parse(fs.readFileSync('./AINE/welkom.json'))
+const nsfw = JSON.parse(fs.readFileSync('./AINE/nsfw.json'))
+const samih = JSON.parse(fs.readFileSync('./AINE/simi.json'))
 const vcard = 'BEGIN:VCARD\n' // ANAK ANJING MAU NGAPAIN?
             + 'VERSION:3.0\n' // NGAPAIN LAGI KALO GA MAU NUMPANG NAMA DOANG XIXIXIXI
-            + 'FN:CO NOEERBOT\n' // MENDING LU TOBAT SU!
-            + 'ORG:Creator NOEERBOT;\n' // KASIH CREDITS GUA SU!!!
-            + 'TEL;type=CELL;type=VOICE;waid=6285722553839:+62 857-2255-3839\n' // JANGAN KEK BABI SU
-            + 'END:VCARD' // ARIS187 ID
+            + 'FN:CO AINEBOT\n' // MENDING LU TOBAT SU!
+            + 'ORG:Creator AINEBOT;\n' // KASIH CREDITS GUA SU!!!
+            + 'TEL;type=CELL;type=VOICE;waid=62895330379186:+62 895-3303-79186\n' // JANGAN KEK BABI SU
+            + 'END:VCARD' // AINE
 prefix = '!'
 const speed = require('performance-now')         
 blocked = []            
@@ -49,11 +49,11 @@ const arrayBulan = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Jul
 const bulan = arrayBulan[moment().format('MM') - 1]
 
 const config = {
-    A187: '👾AR15BOT👾', // TOBAT SU ASU
-    instagram: 'https://instagram.com/_sadboy.ig', // INFO JANGAN DI UBAH
-    nomer: 'wa.me/6285722553839', // INFO SU JNGAN DI UBAH
-    youtube: 'https://youtube.com/channel/UCGYLWtyT9IADYNUiK0uZiGg', // KINTIL
-    whatsapp: 'https://chat.whatsapp.com/DSSHmG2KjKJLoFp9B9mkVs', // BABI
+    AINE: '🤖AINEBOT🤖', // TOBAT SU ASU
+    instagram: 'https://instagram.com/anemio999', // INFO JANGAN DI UBAH
+    nomer: 'wa.me/62895330379186', // INFO SU JNGAN DI UBAH
+    youtube: 'https://youtube.com/channel/UCCOUPwMDA19sekkYzkdmu6w', // KINTIL
+    whatsapp: 'https://chat.whatsapp.com/EYGeuRbVFkfI8JrH3cNrGV', // BABI
     tanggal: `TANGGAL: ${moment().format('DD')} ${bulan} ${moment().format('YYYY')}`,
     waktu: time
 }
@@ -81,7 +81,7 @@ const client = new WAConnection()
 
 client.on('qr', qr => {
    qrcode.generate(qr, { small: true })
-   console.log(`[ ${time} ] QR code is ready, subscribe Aris187 ID`)
+   console.log(`[ ${time} ] QR code is ready, Scan now..`)
 })
 
 client.on('credentials-updated', () => {
@@ -95,7 +95,7 @@ fs.existsSync('./session.json') && client.loadAuthInfo('./session.json')
 
 client.connect();
 
-// client.on('user-presence-update', json => console.log(json.id + ' presence is => ' + json.type)) || console.log(`${time}: Bot by ig:@_sadboy.ig`)
+// client.on('user-presence-update', json => console.log(json.id + ' presence is => ' + json.type)) || console.log(`${time}: Bot by ig:@anemio999`)
 
 client.on('group-participants-update', async (anu) => {
 		if (!welkom.includes(anu.jid)) return
@@ -119,7 +119,7 @@ client.on('group-participants-update', async (anu) => {
 				} catch {
 					ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
 				}
-				teks = `𝐓𝐢𝐭𝐢𝐩 𝐠𝐨𝐫𝐞𝐧𝐠𝐚𝐧 𝐲𝐚𝐡 @${num.split('@')[0]}\n 𝐈 𝐰𝐢𝐥𝐥 𝐦𝐢𝐬𝐬 𝐲𝐨𝐮🏃`
+				teks = `𝗧𝗶𝘁𝗶𝗽 𝘀𝗮𝗹𝗮𝗺 𝘆𝗮𝗵 @${num.split('@')[0]}\n 𝐈 𝐰𝐢𝐥𝐥 𝐦𝐢𝐬𝐬 𝐲𝐨𝐮🤭`
 				let buff = await getBuffer(ppimg)
 				client.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 			}
@@ -170,7 +170,7 @@ client.on('group-participants-update', async (anu) => {
 			}
 
 			const botNumber = client.user.jid
-			const ownerNumber = ["6285722553839@s.whatsapp.net"] // ganti nomer lu
+			const ownerNumber = ["62895330379186@s.whatsapp.net"] // ganti nomer lu
 			const isGroup = from.endsWith('@g.us')
 			const sender = isGroup ? mek.participant : mek.key.remoteJid
 			const groupMetadata = isGroup ? await client.groupMetadata(from) : ''
@@ -214,7 +214,7 @@ client.on('group-participants-update', async (anu) => {
 					case 'info':
 					me = client.user
 					uptime = process.uptime()
-					teks = `➽𝐍𝐚𝐦𝐚 𝐛𝐨𝐭 : ${me.name}\n➽𝐍𝐨𝐦𝐞𝐫 𝐛𝐨𝐭 : @${me.jid.split('@')[0]}\n➽𝐏𝐫𝐞𝐟𝐢𝐱 : ${prefix}\n➽𝐓𝐨𝐭𝐚𝐥 𝐛𝐥𝐨𝐜𝐤 : ${blocked.length}\n➽𝐀𝐤𝐭𝐢𝐟 𝐬𝐞𝐣𝐚𝐤 : ${kyun(uptime)}\n➽𝐈𝐧𝐬𝐭𝐚𝐠𝐫𝐚𝐦 : https://www.instagram.com/_sadboy.ig\n➽𝐘𝐨𝐮𝐓𝐮𝐛𝐞 : https://youtube.com/channel/UCGYLWtyT9IADYNUiK0uZiGg\n➽𝐒𝐜𝐫𝐢𝐩𝐭 𝐛𝐲 : 𝐀𝐫𝐢𝐬𝟏𝟖𝟕 𝐈𝐃 [𝐀𝟏𝟖𝟕]\n➽𝐒𝐩𝐞𝐜𝐢𝐚𝐥 𝐓𝐡𝐚𝐧𝐤𝐬 𝐭𝐨:\n➽𝐀𝐥𝐥𝐚𝐡 𝐒𝐖𝐓\n➽𝐌𝐡𝐚𝐧𝐤𝐛𝐚𝐫𝐛𝐚𝐫\n➽𝐒𝐞𝐥𝐮𝐫𝐮𝐡 𝐜𝐫𝐞𝐚𝐭𝐨𝐫 𝐛𝐨𝐭 𝐲𝐚𝐧𝐠 𝐚𝐝𝐚 𝐝𝐢 𝐆𝐫𝐨𝐮𝐩 𝐁𝐎𝐓 𝐖𝐄 𝐀\n➽𝐒𝐞𝐥𝐮𝐫𝐮𝐡 𝐩𝐞𝐦𝐢𝐥𝐢𝐤 𝐰𝐞𝐛 𝐩𝐞𝐧𝐲𝐞𝐝𝐢𝐚 𝐥𝐚𝐲𝐚𝐧𝐚𝐧 𝐀𝐏𝐈`
+					teks = `➽𝐍𝐚𝐦𝐚 𝐛𝐨𝐭 : ${me.name}\n➽𝐍𝐨𝐦𝐞𝐫 𝐛𝐨𝐭 : @${me.jid.split('@')[0]}\n➽𝐏𝐫𝐞𝐟𝐢𝐱 : ${prefix}\n➽𝐓𝐨𝐭𝐚𝐥 𝐛𝐥𝐨𝐜𝐤 : ${blocked.length}\n➽𝐀𝐤𝐭𝐢𝐟 𝐬𝐞𝐣𝐚𝐤 : ${kyun(uptime)}\n➽𝐈𝐧𝐬𝐭𝐚𝐠𝐫𝐚𝐦 : https://www.instagram.com/anemio999\n➽𝐘𝐨𝐮𝐓𝐮𝐛𝐞 : https://youtube.com/channel/UCCOUPwMDA19sekkYzkdmu6w\n➽𝐒𝐜𝐫𝐢𝐩𝐭 𝐛𝐲 : 𝗠𝘂𝗵𝗮𝗺𝗺𝗮𝗱 𝗥𝗶𝗱𝘄𝗮𝗻 𝗥𝗲𝘆𝗻𝗮𝗹𝗱𝘆\n➽𝐒𝐩𝐞𝐜𝐢𝐚𝐥 𝐓𝐡𝐚𝐧𝐤𝐬 𝐭𝐨:\n➽𝐀𝐥𝐥𝐚𝐡 𝐒𝐖𝐓\n➽𝐌𝐡𝐚𝐧𝐤𝐛𝐚𝐫𝐛𝐚𝐫\n➽𝐒𝐞𝐥𝐮𝐫𝐮𝐡 𝐜𝐫𝐞𝐚𝐭𝐨𝐫 𝐛𝐨𝐭\n➽𝐒𝐞𝐥𝐮𝐫𝐮𝐡 𝐩𝐞𝐦𝐢𝐥𝐢𝐤 𝐰𝐞𝐛 𝐩𝐞𝐧𝐲𝐞𝐝𝐢𝐚 𝐥𝐚𝐲𝐚𝐧𝐚𝐧 𝐀𝐏𝐈𝐊𝐄𝐘`
 					buffer = await getBuffer(me.imgUrl)
 					client.sendMessage(from, buffer, image, {caption: teks, contextInfo:{mentionedJid: [me.jid]}})
 					break
@@ -266,12 +266,62 @@ client.on('group-participants-update', async (anu) => {
 					var gh = body.slice(11)
 					var teks1 = gh.split("|")[0];
 					var teks2 = gh.split("|")[1];
-					if (args.length < 1) return reply(`teksnya mana? contoh ${prefix}logowolf Aris|Ganss`)
+					if (args.length < 1) return reply(`teksnya mana? contoh ${prefix}logowolf  Aine|Ainebot`)
 					reply(mess.wait)
 					anu = await fetchJson(`https://tobz-api.herokuapp.com/api/textpro?theme=wolflogo1&text1=${teks1}&text2=${teks2}`, {method: 'get'})
 					buffer = await getBuffer(anu.result)
 					client.sendMessage(from, buffer, image, {quoted: mek})
-					break				
+					break
+				case 'logolion':
+					var gh = body.slice(11)
+					var teks1 = gh.split("|")[0];
+					var teks2 = gh.split("|")[1];
+					if (args.length < 1) return reply(`teksnya mana? contoh ${prefix}lionlogo  Aine|Ainebot`)
+					reply(mess.wait)
+					anu = await fetchJson(`https://tobz-api.herokuapp.com/api/textpro?theme=lionlogo&text1=${teks1}&text2=${teks2}`, {method: 'get'})
+					buffer = await getBuffer(anu.result)
+					client.sendMessage(from, buffer, image, {quoted: mek})
+					break
+				case 'logoglitch':
+					var gh = body.slice(11)
+					var teks1 = gh.split("|")[0];
+					var teks2 = gh.split("|")[1];
+					if (args.length < 1) return reply(`teksnya mana? contoh ${prefix}glitch  Aine|Ainebot`)
+					reply(mess.wait)
+					anu = await fetchJson(`https://tobz-api.herokuapp.com/api/textpro?theme=glitch&text1=${teks1}&text2=${teks2}`, {method: 'get'})
+					buffer = await getBuffer(anu.result)
+					client.sendMessage(from, buffer, image, {quoted: mek})
+					break
+				case 'logojoker':
+					var gh = body.slice(11)
+					var teks1 = gh.split("|")[0];
+					var teks2 = gh.split("|")[1];
+					if (args.length < 1) return reply(`teksnya mana? contoh ${prefix}logojoker  Aine|Ainebot`)
+					reply(mess.wait)
+					anu = await fetchJson(`https://tobz-api.herokuapp.com/api/textpro?theme=jokerlogo&text1=${teks1}`, {method: 'get'})
+					buffer = await getBuffer(anu.result)
+					client.sendMessage(from, buffer, image, {quoted: mek})
+					break
+				case 'logowater':
+					var gh = body.slice(11)
+					var teks1 = gh.split("|")[0];
+					var teks2 = gh.split("|")[1];
+					if (args.length < 1) return reply(`teksnya mana? contoh ${prefix}logowater  Aine|Ainebot`)
+					reply(mess.wait)
+					anu = await fetchJson(`https://tobz-api.herokuapp.com/api/textpro?theme=dropwater&text1=${teks1}`, {method: 'get'})
+					buffer = await getBuffer(anu.result)
+					client.sendMessage(from, buffer, image, {quoted: mek})
+					break
+				case 'logoblood':
+					var gh = body.slice(11)
+					var teks1 = gh.split("|")[0];
+					var teks2 = gh.split("|")[1];
+					if (args.length < 1) return reply(`teksnya mana? contoh ${prefix}logoblood  Aine|Ainebot`)
+					reply(mess.wait)
+					anu = await fetchJson(`https://tobz-api.herokuapp.com/api/textpro?theme=blood&text1=${teks1}`, {method: 'get'})
+					buffer = await getBuffer(anu.result)
+					client.sendMessage(from, buffer, image, {quoted: mek})
+					break
 					case 'setpp': 
                         if (!isGroup) return reply(mess.only.group)
                        if (!isGroupAdmins) return reply(mess.only.admin)

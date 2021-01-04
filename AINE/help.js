@@ -13,8 +13,10 @@ const help = (prefix) => {
 ┃╠➥ *${prefix}toimg* [reply pict]
 ┃╠➥ *${prefix}logowolf* [AINE|text]
 ┃╠➥ *${prefix}logolion* [AINE|text]
-┃╠➥ *${prefix}logojoker* [AINE|text]
 ┃╠➥ *${prefix}logoglitch* [AINE|text]
+┃╠➥ *${prefix}logogjoker* [AINE]
+┃╠➥ *${prefix}logoblood* [AINE]
+┃╠➥ *${prefix}logodropwater* [AINE]
 ┃╚═══════════════════╝
 ┣━━━━°❀ ❬ 𝙈𝙀𝘿𝙄𝘼 ❭ ❀°━━━━━⊱
 ┃╔═══════════════════╗

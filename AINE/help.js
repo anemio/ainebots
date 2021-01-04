@@ -14,7 +14,7 @@ const help = (prefix) => {
 ┃╠➥ *${prefix}logowolf* [AINE|text]
 ┃╠➥ *${prefix}logolion* [AINE|text]
 ┃╠➥ *${prefix}logoglitch* [AINE|text]
-┃╠➥ *${prefix}logogjoker* [AINE]
+┃╠➥ *${prefix}logojoker* [AINE]
 ┃╠➥ *${prefix}logoblood* [AINE]
 ┃╠➥ *${prefix}logodropwater* [AINE]
 ┃╚═══════════════════╝

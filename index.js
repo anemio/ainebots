@@ -276,7 +276,7 @@ client.on('group-participants-update', async (anu) => {
 					var gh = body.slice(11)
 					var teks1 = gh.split("|")[0];
 					var teks2 = gh.split("|")[1];
-					if (args.length < 1) return reply(`teksnya mana? contoh ${prefix}lionlogo  Aine|Ainebot`)
+					if (args.length < 1) return reply(`teksnya mana? contoh ${prefix}logolion  Aine|Ainebot`)
 					reply(mess.wait)
 					anu = await fetchJson(`https://tobz-api.herokuapp.com/api/textpro?theme=lionlogo&text1=${teks1}&text2=${teks2}`, {method: 'get'})
 					buffer = await getBuffer(anu.result)
@@ -286,7 +286,7 @@ client.on('group-participants-update', async (anu) => {
 					var gh = body.slice(11)
 					var teks1 = gh.split("|")[0];
 					var teks2 = gh.split("|")[1];
-					if (args.length < 1) return reply(`teksnya mana? contoh ${prefix}glitch  Aine|Ainebot`)
+					if (args.length < 1) return reply(`teksnya mana? contoh ${prefix}logoglitch  Aine|Ainebot`)
 					reply(mess.wait)
 					anu = await fetchJson(`https://tobz-api.herokuapp.com/api/textpro?theme=glitch&text1=${teks1}&text2=${teks2}`, {method: 'get'})
 					buffer = await getBuffer(anu.result)

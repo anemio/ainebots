@@ -241,7 +241,7 @@ client.on('group-participants-update', async (anu) => {
 								fs.unlinkSync(media)
 							})
 					} else {
-						reply('Foto aja mas')
+						reply('Foto aja kak')
 					}
 					break				
 					case 'ytmp3':
@@ -454,7 +454,7 @@ client.on('group-participants-update', async (anu) => {
               case 'owner':
                 case 'creator':
                   client.sendMessage(from, {displayname: "Jeff", vcard: vcard}, MessageType.contact, { quoted: mek})
-               client.sendMessage(from, '𝐍𝐢𝐞𝐡 𝐧𝐨𝐦𝐞𝐫 𝐂𝐎 𝐤𝐮 𝐤𝐚𝐤, 𝐣𝐢𝐤𝐚 𝐦𝐚𝐮 𝐦𝐚𝐬𝐮𝐤𝐚𝐧 aku 𝐤𝐞 𝐠𝐫𝐨𝐮𝐩 𝐤𝐚𝐥𝐢𝐚𝐧 𝐜𝐡𝐚𝐭 𝐝𝐢𝐚 𝐲𝐚𝐡 kak',MessageType.text, { quoted: mek} )
+               client.sendMessage(from, '𝐍𝐢𝐞𝐡 𝐧𝐨𝐦𝐞𝐫 𝐨𝐰𝐧𝐞𝐫 𝐤𝐮 𝐤𝐚𝐤, 𝐣𝐢𝐤𝐚 𝐦𝐚𝐮 𝐦𝐚𝐬𝐮𝐤𝐚𝐧 𝐚𝐤𝐮 𝐤𝐞 𝐠𝐫𝐨𝐮𝐩 𝐤𝐚𝐥𝐢𝐚𝐧 𝐜𝐡𝐚𝐭 𝐝𝐢𝐚 𝐲𝐚𝐡 𝐤𝐚𝐤',MessageType.text, { quoted: mek} )
                 break  
             
 				case 'nsfw':
@@ -493,7 +493,7 @@ client.on('group-participants-update', async (anu) => {
                 case 'jago':
               case 'abangjago':
               case 'abgjago':
-                    let eerrr = fs.readFileSync('./A187ID/abangjago.mp3')
+                    let eerrr = fs.readFileSync('./AINE/abangjago.mp3')
                     client.sendMessage(from, eerrr, MessageType.audio, { ptt: true, quoted: mek })
                     break    
                 
@@ -553,7 +553,7 @@ client.on('group-participants-update', async (anu) => {
 					break
 					case 'tstiker':
 				case 'tsticker':
-					if (args.length < 1) return reply('Textnya mana um?')
+					if (args.length < 1) return reply('Textnya mana kak?')
 					ranp = getRandom('.png')
 					rano = getRandom('.webp')
 					teks = body.slice(9).trim()
@@ -608,7 +608,7 @@ client.on('group-participants-update', async (anu) => {
 								console.log(`Error : ${err}`)
 								fs.unlinkSync(media)
 								tipe = media.endsWith('.mp4') ? 'video' : 'gif'
-								reply(`𝗬𝗲𝗮𝗵 𝗴𝗮𝗴𝗮𝗹 ;(, 𝘂𝗹𝗮𝗻𝗴𝗶 𝗹𝗮𝗴𝗶 𝘆𝗮𝗵 𝘁𝗼𝗱 ^_^`)
+								reply(`𝗬𝗲𝗮𝗵 𝗴𝗮𝗴𝗮𝗹 ;(, 𝘂𝗹𝗮𝗻𝗴𝗶 𝗹𝗮𝗴𝗶 𝘆𝗮𝗵 𝗸𝗮𝗸 ^_^`)
 							})
 							.on('end', function () {
 								console.log('Finish')
@@ -631,7 +631,7 @@ client.on('group-participants-update', async (anu) => {
 							fs.unlinkSync(media)
 							let buffer = Buffer.from(res.base64img, 'base64')
 							fs.writeFileSync(ranp, buffer, (err) => {
-								if (err) return reply('𝗬𝗲𝗮𝗵 𝗴𝗮𝗴𝗮𝗹 ;(, 𝘂𝗹𝗮𝗻𝗴𝗶 𝗹𝗮𝗴𝗶 𝘆𝗮𝗵 𝘁𝗼𝗱 ^_^')
+								if (err) return reply('𝗬𝗲𝗮𝗵 𝗴𝗮𝗴𝗮𝗹 ;(, 𝘂𝗹𝗮𝗻𝗴𝗶 𝗹𝗮𝗴𝗶 𝘆𝗮𝗵 𝗸𝗮𝗸 ^_^')
 							})
 							exec(`ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=20 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${ranw}`, (err) => {
 								fs.unlinkSync(ranp)
@@ -647,14 +647,14 @@ client.on('group-participants-update', async (anu) => {
 				
 				case 'gtts':	
 				case 'tts':
-					if (args.length < 1) return client.sendMessage(from, '𝗱𝗶𝗽𝗲𝗿𝗹𝘂𝗸𝗮𝗻 𝗸𝗼𝗱𝗲 𝗯𝗮𝗵𝗮𝘀𝗮 𝘁𝗼𝗱!', text, {quoted: mek})
+					if (args.length < 1) return client.sendMessage(from, '𝗱𝗶𝗽𝗲𝗿𝗹𝘂𝗸𝗮𝗻 𝗸𝗼𝗱𝗲 𝗯𝗮𝗵𝗮𝘀𝗮 𝘀𝗲𝘁𝗮𝗻!', text, {quoted: mek})
 					const gtts = require('./A187ID/gtts')(args[0])
-					if (args.length < 2) return client.sendMessage(from, '𝗧𝗲𝗸𝘀 𝘆𝗮𝗻𝗴 𝗺𝗮𝘂 𝗱𝗶𝗷𝗮𝗱𝗶𝗶𝗻 𝘀𝘂𝗮𝗿𝗮 𝗺𝗮𝗻𝗮 𝘁𝗼𝗱? 𝘁𝘆𝘁𝗱 𝗸𝗮𝗵?', text, {quoted: mek})
+					if (args.length < 2) return client.sendMessage(from, '𝗧𝗲𝗸𝘀 𝘆𝗮𝗻𝗴 𝗺𝗮𝘂 𝗱𝗶𝗷𝗮𝗱𝗶𝗶𝗻 𝘀𝘂𝗮𝗿𝗮 𝗺𝗮𝗻𝗮 𝘀𝗲𝘁𝗮𝗻? 𝗦𝗲𝘁𝗮𝗻 𝗸𝗮𝗵?', text, {quoted: mek})
 					dtt = body.slice(9)
 					ranm = getRandom('.mp3')
 					rano = getRandom('.ogg')
 					dtt.length > 300
-					? reply('𝗜𝗱𝗶𝗵 𝗻𝗴𝗲𝗹𝘂𝗻𝗷𝗮𝗸 𝗻𝗴𝗲𝗻𝘁𝗼𝗱, 𝘁𝗲𝗸𝘀𝗻𝘆𝗮 𝗷𝗮𝗻𝗴𝗮𝗻 𝗸𝗲𝗽𝗮𝗻𝗷𝗮𝗻𝗴𝗮𝗻 😤')
+					? reply('𝗜𝗱𝗶𝗵 𝗻𝗴𝗲𝗹𝘂𝗻𝗷𝗮𝗸 𝘀𝗲𝘁𝗮𝗻, 𝘁𝗲𝗸𝘀𝗻𝘆𝗮 𝗷𝗮𝗻𝗴𝗮𝗻 𝗸𝗲𝗽𝗮𝗻𝗷𝗮𝗻𝗴𝗮𝗻 😤')
 					: gtts.save(ranm, dtt, function() {
 						exec(`ffmpeg -i ${ranm} -ar 48000 -vn -c:a libopus ${rano}`, (err) => {
 							fs.unlinkSync(ranm)
@@ -689,7 +689,7 @@ client.on('group-participants-update', async (anu) => {
 					break
 				
 				case 'ytsearch': 
-					if (args.length < 1) return reply('𝘆𝗮𝗻𝗴 𝗺𝗮𝘂 𝗱𝗶𝗰𝗮𝗿𝗶 𝗮𝗽𝗮 𝘁𝗼𝗱? 𝘁𝘆𝘁𝗱 𝗸𝗮𝗵?')
+					if (args.length < 1) return reply('𝘆𝗮𝗻𝗴 𝗺𝗮𝘂 𝗱𝗶𝗰𝗮𝗿𝗶 𝗮𝗽𝗮 𝘀𝗲𝘁𝗮𝗻? 𝗦𝗲𝘁𝗮𝗻 𝗸𝗮𝗵?')
 					anu = await fetchJson(`https://mhankbarbars.herokuapp.com/api/ytsearch?q=${body.slice(10)}&apiKey=${apiKey}`, {method: 'get'})
 					if (anu.error) return reply(anu.error)
 					teks = '=================\n'
@@ -723,7 +723,7 @@ client.on('group-participants-update', async (anu) => {
 					break
 				case 'nulis': 
 				case 'tulis': ini
-					if (args.length < 1) return reply('𝐚𝐤𝐮 𝐬𝐮𝐫𝐮𝐡 𝐧𝐮𝐥𝐢𝐬 𝐚𝐩𝐚 𝐤𝐚𝐤? 𝐓𝐲𝐭𝐝 𝐤𝐚𝐡!')
+					if (args.length < 1) return reply('𝐚𝐤𝐮 𝐬𝐮𝐫𝐮𝐡 𝐧𝐮𝐥𝐢𝐬 𝐚𝐩𝐚 𝐤𝐚𝐤? 𝗦𝗲𝘁𝗮𝗻 𝗸𝗮𝗵!')
 					teks = body.slice(7)
 					reply(mess.wait)
 					anu = await fetchJson(`https://mhankbarbars.herokuapp.com/nulis?text=${teks}&apiKey=${apiKey}`, {method: 'get'})
@@ -780,12 +780,12 @@ client.on('group-participants-update', async (anu) => {
 						const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
 						buff = await client.downloadMediaMessage(encmedia)
 						for (let _ of anu) {
-							client.sendMessage(_.jid, buff, image, {caption: `❮ 𝐏𝐄𝐒𝐀𝐍 𝐁𝐑𝐎𝐀𝐃𝐂𝐀𝐒𝐓 𝐍𝐎𝐄𝐄𝐑𝐁𝐎𝐓 ❯\n\n${body.slice(4)}`})
+							client.sendMessage(_.jid, buff, image, {caption: `❮ 𝐏𝐄𝐒𝐀𝐍 𝐁𝐑𝐎𝐀𝐃𝐂𝐀𝐒𝐓 𝐀𝐈𝐍𝐄𝐁𝐎𝐓 ❯\n\n${body.slice(4)}`})
 						}
 						reply('𝐬𝐮𝐜𝐜𝐬𝐬 𝐛𝐫𝐨𝐚𝐝𝐜𝐚𝐬𝐭')
 					} else {
 						for (let _ of anu) {
-							sendMess(_.jid, `❮ 𝐏𝐄𝐒𝐀𝐍 𝐁𝐑𝐎𝐀𝐃𝐂𝐀𝐒𝐓 𝐍𝐎𝐄𝐄𝐑𝐁𝐎𝐓 ❯\n\n${body.slice(4)}`)
+							sendMess(_.jid, `❮ 𝐏𝐄𝐒𝐀𝐍 𝐁𝐑𝐎𝐀𝐃𝐂𝐀𝐒𝐓 𝐀𝐈𝐍𝐄𝐁𝐎𝐓 ❯\n\n${body.slice(4)}`)
 						}
 						reply('𝐬𝐮𝐜𝐜𝐬𝐬 𝐛𝐫𝐨𝐚𝐝𝐜𝐚𝐬𝐭')
 					}

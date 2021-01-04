@@ -648,7 +648,7 @@ client.on('group-participants-update', async (anu) => {
 				case 'gtts':	
 				case 'tts':
 					if (args.length < 1) return client.sendMessage(from, '𝗱𝗶𝗽𝗲𝗿𝗹𝘂𝗸𝗮𝗻 𝗸𝗼𝗱𝗲 𝗯𝗮𝗵𝗮𝘀𝗮 𝘀𝗲𝘁𝗮𝗻!', text, {quoted: mek})
-					const gtts = require('./A187ID/gtts')(args[0])
+					const gtts = require('./AINE/gtts')(args[0])
 					if (args.length < 2) return client.sendMessage(from, '𝗧𝗲𝗸𝘀 𝘆𝗮𝗻𝗴 𝗺𝗮𝘂 𝗱𝗶𝗷𝗮𝗱𝗶𝗶𝗻 𝘀𝘂𝗮𝗿𝗮 𝗺𝗮𝗻𝗮 𝘀𝗲𝘁𝗮𝗻? 𝗦𝗲𝘁𝗮𝗻 𝗸𝗮𝗵?', text, {quoted: mek})
 					dtt = body.slice(9)
 					ranm = getRandom('.mp3')
